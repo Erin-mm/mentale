@@ -1,0 +1,20 @@
+$shixin-bg: #f7f9f7;
+$shixin-surface: #ffffff;
+$shixin-text: #2e382f;
+$shixin-muted: #858e86;
+$shixin-line: #e5e9e6;
+$shixin-green: #788d76;
+$shixin-green-dark: #566b56;
+$shixin-coral: #d98973;
+$shixin-cream: #fbfcfa;
+
+.safe-page {
+  min-height: 100vh;
+  padding: 0 32rpx calc(48rpx + env(safe-area-inset-bottom));
+}
+
+.soft-card {
+  background: rgba(255, 255, 255, 0.97);
+  border: 1rpx solid rgba(120, 141, 118, 0.09);
+  box-shadow: 0 16rpx 44rpx rgba(79, 88, 72, 0.07);
+}

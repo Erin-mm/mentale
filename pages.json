@@ -1,0 +1,30 @@
+{
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "拾心"
+      }
+    },
+    {
+      "path": "pages/editor/editor",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "记录想法"
+      }
+    },
+    {
+      "path": "pages/settings/settings",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "设置"
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+        "navigationBarBackgroundColor": "#f7f9f7",
+        "backgroundColor": "#f7f9f7"
+  }
+}

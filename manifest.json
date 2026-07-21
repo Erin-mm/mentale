@@ -1,0 +1,62 @@
+{
+    "name" : "拾心",
+    "appid" : "__UNI__4AD59CE",
+    "description" : "随时随地，拾起心里的小想法",
+    "versionName" : "0.1.0",
+    "versionCode" : "100",
+    "transformPx" : false,
+    "app-plus" : {
+        "usingComponents" : true,
+        "nvueStyleCompiler" : "uni-app",
+        "compilerVersion" : 3,
+        "splashscreen" : {
+            "alwaysShowBeforeRender" : true,
+            "waiting" : true,
+            "autoclose" : true,
+            "delay" : 0
+        },
+        "distribute" : {
+            "android" : {
+                "permissions" : [
+                    "<uses-permission android:name=\"android.permission.INTERNET\" />",
+                    "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />"
+                ],
+                "minSdkVersion" : 23,
+                "targetSdkVersion" : 35,
+                "abiFilters" : [ "arm64-v8a", "armeabi-v7a" ]
+            },
+            "ios" : {
+                "dSYMs" : false
+            },
+            "icons" : {
+                "android" : {
+                    "mdpi" : "static/icons/icon-v2-48.png",
+                    "hdpi" : "static/icons/icon-v2-72.png",
+                    "xhdpi" : "static/icons/icon-v2-96.png",
+                    "xxhdpi" : "static/icons/icon-v2-144.png",
+                    "xxxhdpi" : "static/icons/icon-v2-192.png"
+                },
+                "ios" : {
+                    "appstore" : "static/icons/icon-v2-1024.png",
+                    "iphone" : {
+                        "app@2x" : "static/icons/icon-v2-120.png",
+                        "app@3x" : "static/icons/icon-v2-180.png",
+                        "spotlight@2x" : "static/icons/icon-v2-80.png",
+                        "spotlight@3x" : "static/icons/icon-v2-120.png",
+                        "settings@2x" : "static/icons/icon-v2-58.png",
+                        "settings@3x" : "static/icons/icon-v2-87.png"
+                    }
+                }
+            }
+        }
+    },
+    "quickapp" : {},
+    "mp-weixin" : {
+        "appid" : "",
+        "setting" : {
+            "urlCheck" : false
+        },
+        "usingComponents" : true
+    },
+    "vueVersion" : "3"
+}
