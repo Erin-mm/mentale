@@ -2,8 +2,8 @@
     "name" : "拾心",
     "appid" : "__UNI__4AD59CE",
     "description" : "随时随地，拾起心里的小想法",
-    "versionName" : "0.1.0",
-    "versionCode" : "100",
+    "versionName" : "0.1.1",
+    "versionCode" : 101,
     "transformPx" : false,
     "app-plus" : {
         "usingComponents" : true,
@@ -30,21 +30,21 @@
             },
             "icons" : {
                 "android" : {
-                    "mdpi" : "static/icons/icon-v2-48.png",
-                    "hdpi" : "static/icons/icon-v2-72.png",
-                    "xhdpi" : "static/icons/icon-v2-96.png",
-                    "xxhdpi" : "static/icons/icon-v2-144.png",
-                    "xxxhdpi" : "static/icons/icon-v2-192.png"
+                    "mdpi" : "static/icons/icon-v3-48.png",
+                    "hdpi" : "static/icons/icon-v3-72.png",
+                    "xhdpi" : "static/icons/icon-v3-96.png",
+                    "xxhdpi" : "static/icons/icon-v3-144.png",
+                    "xxxhdpi" : "static/icons/icon-v3-192.png"
                 },
                 "ios" : {
-                    "appstore" : "static/icons/icon-v2-1024.png",
+                    "appstore" : "static/icons/icon-v3-1024.png",
                     "iphone" : {
-                        "app@2x" : "static/icons/icon-v2-120.png",
-                        "app@3x" : "static/icons/icon-v2-180.png",
-                        "spotlight@2x" : "static/icons/icon-v2-80.png",
-                        "spotlight@3x" : "static/icons/icon-v2-120.png",
-                        "settings@2x" : "static/icons/icon-v2-58.png",
-                        "settings@3x" : "static/icons/icon-v2-87.png"
+                        "app@2x" : "static/icons/icon-v3-120.png",
+                        "app@3x" : "static/icons/icon-v3-180.png",
+                        "spotlight@2x" : "static/icons/icon-v3-80.png",
+                        "spotlight@3x" : "static/icons/icon-v3-120.png",
+                        "settings@2x" : "static/icons/icon-v3-58.png",
+                        "settings@3x" : "static/icons/icon-v3-87.png"
                     }
                 }
             }

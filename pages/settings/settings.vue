@@ -90,7 +90,7 @@ export default {
 .token-input input { flex: 1; background: transparent; }
 .token-input text { color: $shixin-green-dark; font-size: 23rpx; }
 .security-note { display: block; margin-top: 20rpx; color: #989e98; font-size: 21rpx; line-height: 1.6; }
-.sync-btn { height: 94rpx; margin: 28rpx 0 0; border-radius: 29rpx; color: #fff; background: linear-gradient(145deg, #879a84, #667b64); box-shadow: 0 16rpx 38rpx rgba(86,107,86,.22); font-size: 29rpx; font-weight: 650; line-height: 94rpx; }
+.sync-btn { height: 94rpx; margin: 28rpx 0 0; border-radius: 29rpx; color: #fff; background: linear-gradient(145deg, #7eae82, #587f5e); box-shadow: 0 16rpx 38rpx rgba(71,116,80,.23); font-size: 29rpx; font-weight: 650; line-height: 94rpx; }
 .sync-btn[disabled] { opacity: .72; }
 .status { margin-top: 20rpx; padding: 20rpx 24rpx; border-radius: 20rpx; font-size: 23rpx; line-height: 1.5; }
 .status.success { color: #566b56; background: #eaeFE6; }

@@ -124,7 +124,7 @@ export default {
 .eyebrow { display: block; color: $shixin-green; font-size: 20rpx; font-weight: 700; letter-spacing: 4rpx; margin-bottom: 8rpx; }
 .title-row { display: flex; align-items: center; gap: 14rpx; }
 .title { font-size: 58rpx; font-weight: 750; letter-spacing: 4rpx; color: $shixin-text; }
-.heart { color: $shixin-coral; font-size: 30rpx; transform: rotate(-8deg); }
+.heart { color: #f1786d; font-size: 30rpx; transform: rotate(-8deg); }
 .subtitle { display: block; color: $shixin-muted; font-size: 25rpx; margin-top: 6rpx; }
 .settings-btn { width: 76rpx; height: 76rpx; display: flex; align-items: center; justify-content: center; margin: 8rpx 0 0; padding: 0; border-radius: 26rpx; background: rgba(255,255,255,.94); color: $shixin-green-dark; box-shadow: 0 10rpx 30rpx rgba(79,88,72,.08); line-height: 1; }
 .settings-icon { width: 54rpx; height: 54rpx; display: block; }
@@ -145,7 +145,7 @@ export default {
 .empty-mark { width: 130rpx; height: 130rpx; display: grid; place-items: center; border-radius: 44rpx; color: $shixin-coral; background: linear-gradient(145deg, #fff, #edf2ee); box-shadow: 0 20rpx 50rpx rgba(79,88,72,.09); font-size: 64rpx; }
 .empty-title { margin-top: 42rpx; font-size: 31rpx; font-weight: 650; }
 .empty-copy { max-width: 480rpx; margin-top: 16rpx; color: $shixin-muted; font-size: 25rpx; line-height: 1.7; }
-.add-button { position: fixed; right: 42rpx; bottom: calc(42rpx + env(safe-area-inset-bottom)); width: 112rpx; height: 112rpx; display: flex; align-items: center; justify-content: center; margin: 0; padding: 0; border-radius: 50%; background: linear-gradient(145deg, #879a84, #667b64); box-shadow: 0 18rpx 42rpx rgba(86,107,86,.27); }
+.add-button { position: fixed; right: 42rpx; bottom: calc(42rpx + env(safe-area-inset-bottom)); width: 112rpx; height: 112rpx; display: flex; align-items: center; justify-content: center; margin: 0; padding: 0; border-radius: 50%; background: linear-gradient(145deg, #8fc693, #69a875); box-shadow: 0 18rpx 42rpx rgba(82,150,96,.28); }
 .plus-icon { position: relative; width: 42rpx; height: 42rpx; }
 .plus-line { position: absolute; top: 50%; left: 50%; border-radius: 999rpx; background: rgba(255,255,255,.96); transform: translate(-50%, -50%); }
 .plus-line--horizontal { width: 42rpx; height: 7rpx; }
