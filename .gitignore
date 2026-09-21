@@ -2,3 +2,5 @@
 unpackage/
 node_modules/
 .hbuilderx/
+.workbuddy/
+.trash-icons/

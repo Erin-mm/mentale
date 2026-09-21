@@ -1,9 +1,9 @@
 {
   "name": "shixin",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "private": true,
   "type": "module",
-  "description": "拾心 - 本地优先的 uni-app 随手记应用",
+  "description": "余白 - 本地优先的 uni-app 随手记应用",
   "scripts": {
     "test": "node tests/sync.test.js",
     "check": "node tests/project-check.js"

@@ -119,7 +119,7 @@ async function writeRemote(settings, notes, sha = '') {
     method: 'PUT',
     header: { ...headers(settings), 'Content-Type': 'application/json' },
     data: {
-      message: 'Sync 拾心 thoughts.json',
+      message: 'Sync 余白 thoughts.json',
       branch: settings.branch,
       content: encodeBase64(notes),
       ...(sha ? { sha } : {}),

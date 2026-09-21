@@ -3,9 +3,8 @@
     <view class="status-spacer" />
     <view class="topbar">
       <view>
-        <text class="eyebrow">COLLECT YOUR HEART</text>
-        <view class="title-row"><text class="title">拾心</text><text class="heart">♥</text></view>
-        <text class="subtitle">随手记下，心里刚刚闪过的光</text>
+        <view class="title-row"><text class="title">余白</text></view>
+        <text class="subtitle">留白处，听见自己。</text>
       </view>
       <button class="settings-btn" aria-label="设置" @click="openSettings">
         <image class="settings-icon" src="/static/icons/settings-rounded.svg" mode="aspectFit" />
@@ -38,8 +37,8 @@
     </view>
 
     <view v-else class="empty">
-      <text class="empty-title">{{ keyword ? '没有找到这段心事' : '今天，有什么想记下的吗？' }}</text>
-      <text class="empty-copy">{{ keyword ? '换一个词试试看' : '不必完整，也不必正确，写下一点点就好。' }}</text>
+      <text class="empty-title">{{ keyword ? '没有找到这一笔' : '此刻，有什么想对自己说的？' }}</text>
+      <text class="empty-copy">{{ keyword ? '换一个词，再寻一次' : '写下未说完的话，余下的，交给时间。' }}</text>
     </view>
 
     <button class="add-button" aria-label="新建想法" @tap="newNote">
@@ -52,13 +51,25 @@
 import { deleteNote, loadNotes } from '@/common/store.js'
 
 export default {
-  data: () => ({ notes: [], keyword: '', swipedId: '', touchStartX: 0, touchStartY: 0, suppressOpen: false }),
+  data: () => ({
+    notes: [],
+    keyword: '',
+    swipedId: '',
+    touchStartX: 0,
+    touchStartY: 0,
+    suppressOpen: false,
+  }),
   computed: {
     filteredNotes() {
       const word = this.keyword.trim().toLowerCase()
       if (!word) return this.notes
       return this.notes.filter((note) => `${note.title} ${note.content}`.toLowerCase().includes(word))
     },
+  },
+  onReady() {
+    // #ifdef APP-PLUS
+    plus.navigator.closeSplashscreen()
+    // #endif
   },
   onShow() { this.notes = loadNotes(); this.swipedId = '' },
   methods: {
@@ -120,32 +131,30 @@ export default {
 <style lang="scss" scoped>
 .home { position: relative; }
 .status-spacer { height: calc(32rpx + var(--status-bar-height)); }
-.topbar { display: flex; align-items: flex-start; justify-content: space-between; padding: 28rpx 4rpx 32rpx; }
-.eyebrow { display: block; color: $shixin-green; font-size: 20rpx; font-weight: 700; letter-spacing: 4rpx; margin-bottom: 8rpx; }
+.topbar { display: flex; align-items: flex-start; justify-content: space-between; padding: 34rpx 4rpx 36rpx; }
 .title-row { display: flex; align-items: center; gap: 14rpx; }
-.title { font-size: 58rpx; font-weight: 750; letter-spacing: 4rpx; color: $shixin-text; }
-.heart { color: #f1786d; font-size: 30rpx; transform: rotate(-8deg); }
-.subtitle { display: block; color: $shixin-muted; font-size: 25rpx; margin-top: 6rpx; }
-.settings-btn { width: 76rpx; height: 76rpx; display: flex; align-items: center; justify-content: center; margin: 8rpx 0 0; padding: 0; border-radius: 26rpx; background: rgba(255,255,255,.94); color: $shixin-green-dark; box-shadow: 0 10rpx 30rpx rgba(79,88,72,.08); line-height: 1; }
+.title { font-family: $shixin-brand; font-size: 56rpx; font-weight: 500; letter-spacing: 12rpx; color: $shixin-text; }
+.subtitle { display: block; color: $shixin-muted; font-size: 24rpx; font-weight: 500; letter-spacing: 3rpx; margin-top: 12rpx; }
+.settings-btn { width: 76rpx; height: 76rpx; display: flex; align-items: center; justify-content: center; margin: 8rpx 0 0; padding: 0; border: 1rpx solid rgba(66,62,55,.08); border-radius: 26rpx; background: rgba(252,250,245,.96); color: $shixin-green-dark; box-shadow: 0 10rpx 28rpx rgba(65,58,47,.07); line-height: 1; }
 .settings-icon { width: 54rpx; height: 54rpx; display: block; }
-.search-wrap { height: 84rpx; display: flex; align-items: center; gap: 12rpx; padding: 0 26rpx; border-radius: 28rpx; background: rgba(233,239,234,.82); }
+.search-wrap { height: 84rpx; display: flex; align-items: center; gap: 12rpx; padding: 0 26rpx; border: 1rpx solid rgba(76,69,59,.08); border-radius: 24rpx; background: rgba(236,231,219,.72); }
 .search-icon { color: #858f86; font-size: 40rpx; transform: rotate(-18deg); }
 .search { flex: 1; height: 84rpx; color: $shixin-text; font-size: 28rpx; }
-.placeholder { color: #a7aba5; }
+.placeholder { color: #aaa397; }
 .note-list { padding: 30rpx 0 160rpx; }
-.note-swipe { position: relative; margin-bottom: 22rpx; overflow: hidden; border-radius: 34rpx; background: #d97868; }
-.swipe-delete { position: absolute; top: 0; right: 0; bottom: 0; width: 142rpx; height: 100%; display: flex; align-items: center; justify-content: center; margin: 0; padding: 0; border-radius: 0; color: #fff; background: #d97868; font-size: 27rpx; font-weight: 600; line-height: 1; }
-.note-card { position: relative; z-index: 1; min-height: 210rpx; padding: 34rpx 32rpx 25rpx; border-radius: 34rpx; background: #fff; transition: transform 220ms ease; }
+.note-swipe { position: relative; margin-bottom: 22rpx; overflow: hidden; border-radius: 28rpx; background: $shixin-coral; }
+.swipe-delete { position: absolute; top: 0; right: 0; bottom: 0; width: 142rpx; height: 100%; display: flex; align-items: center; justify-content: center; margin: 0; padding: 0; border-radius: 0; color: #fff; background: $shixin-coral; font-size: 27rpx; font-weight: 600; line-height: 1; }
+.note-card { position: relative; z-index: 1; min-height: 210rpx; padding: 34rpx 32rpx 25rpx; border: 1rpx solid rgba(70,64,54,.08); border-radius: 28rpx; background: rgba(252,250,245,.98); transition: transform 220ms ease; }
 .note-card--open { transform: translateX(-142rpx); }
 .note-main { min-height: 112rpx; }
-.note-title { display: block; color: $shixin-text; font-size: 32rpx; font-weight: 650; line-height: 1.45; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
-.note-content { display: -webkit-box; margin-top: 12rpx; overflow: hidden; color: #747d75; font-size: 27rpx; line-height: 1.6; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
-.note-meta { display: flex; align-items: center; gap: 10rpx; padding-top: 20rpx; color: #9da39d; font-size: 22rpx; border-top: 1rpx solid $shixin-line; }
+.note-title { display: block; color: $shixin-text; font-size: 32rpx; font-weight: 500; line-height: 1.55; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.note-content { display: -webkit-box; margin-top: 12rpx; overflow: hidden; color: #7a756c; font-size: 27rpx; font-weight: 400; line-height: 1.75; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.note-meta { display: flex; align-items: center; gap: 10rpx; padding-top: 20rpx; color: #a39b90; font-size: 22rpx; border-top: 1rpx solid $shixin-line; }
 .empty { display: flex; flex-direction: column; align-items: center; padding: 150rpx 48rpx 0; text-align: center; }
 .empty-mark { width: 130rpx; height: 130rpx; display: grid; place-items: center; border-radius: 44rpx; color: $shixin-coral; background: linear-gradient(145deg, #fff, #edf2ee); box-shadow: 0 20rpx 50rpx rgba(79,88,72,.09); font-size: 64rpx; }
-.empty-title { margin-top: 42rpx; font-size: 31rpx; font-weight: 650; }
-.empty-copy { max-width: 480rpx; margin-top: 16rpx; color: $shixin-muted; font-size: 25rpx; line-height: 1.7; }
-.add-button { position: fixed; right: 42rpx; bottom: calc(42rpx + env(safe-area-inset-bottom)); width: 112rpx; height: 112rpx; display: flex; align-items: center; justify-content: center; margin: 0; padding: 0; border-radius: 50%; background: linear-gradient(145deg, #8fc693, #69a875); box-shadow: 0 18rpx 42rpx rgba(82,150,96,.28); }
+.empty-title { margin-top: 42rpx; font-size: 30rpx; font-weight: 500; letter-spacing: 2rpx; }
+.empty-copy { max-width: 480rpx; margin-top: 16rpx; color: $shixin-muted; font-size: 25rpx; font-weight: 400; line-height: 1.85; }
+.add-button { position: fixed; z-index: 9999; right: 42rpx; bottom: calc(42rpx + env(safe-area-inset-bottom)); width: 112rpx; height: 112rpx; display: flex; align-items: center; justify-content: center; margin: 0; padding: 0; border: 2rpx solid rgba(255,255,255,.72); border-radius: 50%; background: $shixin-coral; box-shadow: 0 18rpx 42rpx rgba(126,62,39,.26); transform: translateZ(0); }
 .plus-icon { position: relative; width: 42rpx; height: 42rpx; }
 .plus-line { position: absolute; top: 50%; left: 50%; border-radius: 999rpx; background: rgba(255,255,255,.96); transform: translate(-50%, -50%); }
 .plus-line--horizontal { width: 42rpx; height: 7rpx; }

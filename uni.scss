@@ -1,12 +1,15 @@
-$shixin-bg: #f7f9f7;
-$shixin-surface: #ffffff;
-$shixin-text: #2e382f;
-$shixin-muted: #858e86;
-$shixin-line: #e5e9e6;
-$shixin-green: #788d76;
-$shixin-green-dark: #566b56;
-$shixin-coral: #d98973;
-$shixin-cream: #fbfcfa;
+$shixin-bg: #f4f1e9;
+$shixin-surface: #fcfaf5;
+$shixin-text: #3c3934;
+$shixin-muted: #7f796f;
+$shixin-line: #ddd7ca;
+$shixin-green: #6f695f;
+$shixin-green-dark: #423e37;
+$shixin-coral: #a95736;
+$shixin-cream: #f8f5ee;
+$shixin-ink: #534f48;
+$shixin-sans: 'PingFang SC', 'Hiragino Sans GB', 'Source Han Sans SC', 'Noto Sans SC', 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif;
+$shixin-brand: 'Kaiti SC', 'STKaiti', 'KaiTi', 'Songti SC', $shixin-sans;
 
 .safe-page {
   min-height: 100vh;
@@ -14,7 +17,7 @@ $shixin-cream: #fbfcfa;
 }
 
 .soft-card {
-  background: rgba(255, 255, 255, 0.97);
-  border: 1rpx solid rgba(120, 141, 118, 0.09);
-  box-shadow: 0 16rpx 44rpx rgba(79, 88, 72, 0.07);
+  background: rgba(252, 250, 245, 0.97);
+  border: 1rpx solid rgba(70, 64, 54, 0.11);
+  box-shadow: 0 14rpx 40rpx rgba(65, 58, 47, 0.06);
 }

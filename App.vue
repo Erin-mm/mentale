@@ -1,7 +1,7 @@
 <script>
 export default {
   onLaunch() {
-    console.log('拾心已启动')
+    console.log('余白已启动')
   },
 }
 </script>
@@ -13,7 +13,9 @@ page {
   min-height: 100%;
   background: $shixin-bg;
   color: $shixin-text;
-  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue', sans-serif;
+  font-family: $shixin-sans;
+  font-weight: 400;
+  -webkit-font-smoothing: auto;
 }
 
 view, text, input, textarea, button {

@@ -4,7 +4,7 @@
       "path": "pages/index/index",
       "style": {
         "navigationStyle": "custom",
-        "navigationBarTitleText": "拾心"
+        "navigationBarTitleText": "余白"
       }
     },
     {
@@ -24,7 +24,7 @@
   ],
   "globalStyle": {
     "navigationBarTextStyle": "black",
-        "navigationBarBackgroundColor": "#f7f9f7",
-        "backgroundColor": "#f7f9f7"
+        "navigationBarBackgroundColor": "#f4f1e9",
+        "backgroundColor": "#f4f1e9"
   }
 }
